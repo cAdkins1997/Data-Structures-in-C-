@@ -3,10 +3,11 @@
 #include "vecmath.h"
 
 int main() {
-    DSAcpp::Stack<Vec3<float>> stack(1);
+    using namespace vecmath;
+    DSAcpp::Stack<Vec3<float>> stack(10);
 
     for (int i = 0; i < 20; i++) {
-        Vec3<float> vec(i);
+        Vec3<float> vec(1.0f);
         stack.push(vec);
         std::cout << stack[i] << '\n';
     }
